@@ -1,4 +1,5 @@
 {
+  "homepage": "https://username.github.io/repositoryname/",
   "name": "flowers",
   "private": true,
   "version": "0.0.0",
@@ -8,7 +9,9 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "tailwind": "tailwindcss --version"
+    "tailwind": "tailwindcss --version",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.0.15",
@@ -26,6 +29,7 @@
     "eslint": "^9.21.0",
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.19",
+    "gh-pages": "^6.3.0",
     "globals": "^15.15.0",
     "postcss": "^8.5.3",
     "vite": "^6.2.0"
