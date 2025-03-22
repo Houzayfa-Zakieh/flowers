@@ -1,0 +1,120 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* @font-face {
+    font-family: mainFont;
+    src: url(../../../public/fonts/lightcase.ttf);
+} */
+header svg {
+    width: 20px;
+}
+*{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+:root{
+    --main : #fff;
+    --decor: #E55472;
+    --sub: #000;
+    --sub2: #666;
+    --sub3: #f0f0f0;
+    --sub4: #0f0f0f;
+}
+header form {
+    position: relative;
+}
+
+header form input {
+    position: relative;
+    outline-color: var(--decor);
+    outline-width: initial;
+}
+
+header form button {
+    position: absolute;
+    right:0px;
+    top: 25px;
+    cursor: pointer;
+}
+.shopping sup{
+    color: var(--main);
+    background-color: var(--decor);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-size: 12px;
+    position: absolute;
+    right: -15px;
+    
+}
+
+.shopping{
+    position: relative;
+}
+@media (max-width: 1200px) {
+.searchField {
+    display: none;
+  }
+  .cart {
+    width: 485px;
+  }
+  .logo {
+    width: 485px;
+  }
+  .open {
+    display: none !important;
+  }
+}
+@media (max-width: 992px) {
+    .cart {
+      width: 330px ;
+    }
+    .logo {
+      width: 330px ;
+    }
+    .open {
+        display: none !important;
+      }
+  }
+  
+@media (max-width: 768px) {
+
+    .cart {
+        width: 240px !important;
+      }
+     .logo {
+        width: 240px !important;
+      }
+      .open {
+        display: none !important;
+      }
+  
+}
+@media (max-width:600px) {
+    .row{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+.open svg{
+    cursor: pointer;
+}
+header a:hover{
+    color: var(--decor);
+}
+header .bottomHeader a{
+    padding: 22px 10px;
+    font-size: 14px;
+}
+.menu{
+    border: 1px solid var(--decor);
+    background-color: var(--main);
+    padding: 5px;
+}
+.menu a{
+    
+}
