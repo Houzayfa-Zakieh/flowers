@@ -1,0 +1,87 @@
+.swiper-pagination-bullet {
+  background-color: #666;
+  border: 2px solid #E55472;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #E55472;
+}
+
+.Timer {
+  display: none;
+}
+
+.productsCard:nth-child(6) .Timer {
+  display: block;
+  transition: linear 0.5s;
+}
+
+.productsCard:hover:nth-child(6) .Timer {
+  transform: translateX(50px);
+  opacity: 0;
+}
+
+.cardButtons {
+  transition: linear 0.3s;
+
+}
+
+.productsCard:hover .cardButtons {
+  transform: translateY(-45px);
+  opacity: 100;
+}
+
+.ProductsContainer .productsCard:nth-child(1) .offer-bg {
+  background-color: #9AC45C;
+}
+
+.ProductsContainer .productsCard:nth-child(3) .offer-bg {
+  background-color: #9AC45C;
+}
+
+.ProductsContainer .productsCard:nth-child(6) .offer-bg {
+  background-color: #9AC45C;
+}
+
+.banner {
+  transition: linear 0.6s;
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+}
+
+.banner:hover {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.product2 {
+  transition: linear 0.6s;
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+}
+
+.product2:hover {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.topProducts .mySwiperSlide:nth-child(1) .offer-bg {
+  background-color: #9AC45C ;
+
+}
+
+.topProducts .mySwiperSlide:nth-child(4) .offer-bg {
+  background-color: #9AC45C ;
+
+}
+.swiperIcons {
+  transition: linear 0.3s;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.swiperIcons:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+

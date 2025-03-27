@@ -2,119 +2,231 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 /* @font-face {
     font-family: mainFont;
     src: url(../../../public/fonts/lightcase.ttf);
 } */
 header svg {
-    width: 20px;
+  width: 20px;
 }
-*{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    transition: all 0.3s;
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  transition: all 0.3s;
+
 }
-:root{
-    --main : #fff;
-    --decor: #E55472;
-    --sub: #000;
-    --sub2: #666;
-    --sub3: #f0f0f0;
-    --sub4: #0f0f0f;
+
+i {
+  transition: none
 }
+
+svg {
+  transition: none;
+}
+
+:root {
+  --main: #fff;
+  --decor: #E55472;
+  --sub: #000;
+  --sub2: #666;
+  --sub3: #f0f0f0;
+  --sub4: #0f0f0f;
+}
+
 header form {
-    position: relative;
+  position: relative;
 }
 
 header form input {
-    position: relative;
-    outline-color: var(--decor);
-    outline-width: initial;
+  position: relative;
+  outline-color: var(--decor);
+  outline-width: initial;
 }
 
 header form button {
-    position: absolute;
-    right:0px;
-    top: 25px;
-    cursor: pointer;
-}
-.shopping sup{
-    color: var(--main);
-    background-color: var(--decor);
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    font-size: 12px;
-    position: absolute;
-    right: -15px;
-    
+  position: absolute;
+  right: 0px;
+  top: 25px;
+  cursor: pointer;
 }
 
-.shopping{
-    position: relative;
+.shopping sup {
+  color: var(--main);
+  background-color: var(--decor);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: 12px;
+  position: absolute;
+  right: -15px;
+
 }
+
+.shopping {
+  position: relative;
+}
+
 @media (max-width: 1200px) {
-.searchField {
+  .searchField {
     display: none;
   }
+
   .cart {
     width: 485px;
   }
+
   .logo {
     width: 485px;
   }
-  .open {
-    display: none !important;
-  }
 }
+
 @media (max-width: 992px) {
-    .cart {
-      width: 330px ;
-    }
-    .logo {
-      width: 330px ;
-    }
-    .open {
-        display: none !important;
-      }
+  .cart {
+    width: 330px;
   }
-  
+
+  .logo {
+    width: 330px;
+  }
+
+
+}
+
 @media (max-width: 768px) {
 
-    .cart {
-        width: 240px !important;
-      }
-     .logo {
-        width: 240px !important;
-      }
-      .open {
-        display: none !important;
-      }
-  
+  .cart {
+    width: 240px !important;
+  }
+
+  .logo {
+    width: 240px !important;
+  }
+
 }
+
 @media (max-width:600px) {
-    .row{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
-    }
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
 }
-.open svg{
-    cursor: pointer;
+
+.open svg {
+  cursor: pointer;
 }
-header a:hover{
-    color: var(--decor);
+
+header .topHeader a:hover {
+  color: var(--decor);
 }
-header .bottomHeader a{
-    padding: 22px 10px;
-    font-size: 14px;
+
+header .bottomHeader nav a {
+  padding: 22px 10px;
+  font-size: 14px;
 }
-.menu{
-    border: 1px solid var(--decor);
-    background-color: var(--main);
-    padding: 5px;
+
+header .bottomHeader nav a:hover {
+  color: var(--decor);
+
 }
-.menu a{
-    
+
+.menu {
+  background-color: var(--main);
+  padding: 5px;
+}
+
+.sider svg {
+  width: 20px;
+  cursor: pointer;
+}
+
+.sider form {
+  position: relative;
+}
+
+.sider form input {
+  position: relative;
+  outline-color: var(--decor);
+  outline-width: initial;
+}
+
+.sider form button {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  cursor: pointer;
+}
+
+.sider .sup {
+  position: relative;
+}
+
+.sider .sup svg {
+  position: relative;
+}
+
+.sider sup {
+  width: 20px;
+  font-size: 12px;
+  position: absolute;
+  right: -3px;
+  top: 15px;
+}
+
+.sider::-webkit-scrollbar {
+  width: 3px;
+  border-radius: 30px;
+}
+
+.sider::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+
+}
+
+.sider::-webkit-scrollbar-thumb {
+  background-color: #666;
+}
+
+.sider {
+  position: fixed;
+  left: -400px;
+  z-index: 100;
+  top: 0;
+}
+
+.sider.show {
+  left: 0;
+}
+
+.pagesNav::-webkit-scrollbar {
+  width: 2px;
+  border-radius: 30px;
+}
+
+.pagesNav::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+
+}
+
+.pagesNav::-webkit-scrollbar-thumb {
+  background-color: #666;
+}
+
+.cart2 {
+  position: fixed;
+  right: -400px;
+  z-index: 100;
+  top: 0;
+}
+
+.cart2.show {
+  right: 0;
+}
+
+.cartImg:last-child {
+  border: none;
+  
 }

@@ -1,24 +1,24 @@
-import PhoneIcon from '../icons/PhoneIcon';
-import SearchIcon from '../icons/SearchIcon';
-import BagShoppingIcon from '../icons/bagShoppingIcon';
-import BarsIcon from '../icons/BarsIcon';
-import CloseIcon from '../icons/CloseIcon';
+import PhoneIcon from '../../../icons/PhoneIcon';
+import BagShoppingIcon from '../../../icons/bagShoppingIcon';
+import BarsIcon from '../../../icons/BarsIcon';
+import CloseIcon from '../../../icons/CloseIcon';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
-import Input from '../common/Input';
-import Button from '../common/Button';
-
-import Logo from '../../assets/images/logo.webp';
-
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
-const Header = () => {
-    const [open, setOpen] = useState(false);
-    const click = ()=>{
-        setOpen(!open)
-    }
-    return (
-        <header className="bg-white ">
+import Input from '../../../common/Input';
+import Button from '../../../common/Button';
+import useStore from './useStore';
+import UseStore2 from './UseStore2';
+import Logo from '../../../../assets/images/logo.webp';
 
+const TopHeader = () => {
+    const { open, setOpen } = useStore();
+    const { cart, setCart } = UseStore2();
+    
+
+    return (
+        <>
             <div className='topHeader flex items-center flex-wrap justify-center'>
                 <div className="topHeader-container pt-[15px] pb-[15px]">
 
@@ -40,15 +40,16 @@ const Header = () => {
                             </div>
                             <form method='get' className=' pt-[25px] pb-[25px]'>
                                 <Input className='pt-[1px] pr-[50px] pb-[1px] pl-[20px] w-[500px] h-[45px] border-1 border-solid border-[#f0f0f0] rounded-[50px]' placeholder="Search here..." />
-                                <Button className="pl-[15px] pr-[15px] w-[48px] h-[45px]" type="submit" title={<SearchIcon />} />
+                                <Button className="pl-[15px] pr-[15px] w-[48px] h-[45px]" type="submit" title={<FontAwesomeIcon className='hover:text-[#E55472]' icon={faMagnifyingGlass} />} />
                             </form>
 
                         </div>
                         <div className='cart md:w-[240px] flex items-center justify-center gap-5 pr-[20px] pl-[20px]'>
+                            <button onClick={()=> setCart(!cart)} className='flex items-center justify-center gap-[20px] cursor-pointer'> 
                             <div className="shoppingF" >
                                 <div className="shopping" >
                                     <sup className='flex items-center justify-center'>2</sup>
-                                    <BagShoppingIcon data-number="2" />
+                                    <BagShoppingIcon />
                                 </div>
                             </div>
                             <div className=' flex items-start justify-start flex-col  '>
@@ -57,13 +58,15 @@ const Header = () => {
                                 </span>
                                 <span className=' text-[#E55472] text-[12px]'> $89.25</span>
                             </div>
-                            <div className="open">
-                                <button type='button' onClick={click}>
+                            
+                            </button>
+                            <div className="open block md:hidden ">
+                                <button type='button' onClick={()=> setOpen(!open)}>
                                     {open ?
-                                            <CloseIcon color="#000"/>
-                                            :
+                                        <CloseIcon color="#000" />
+                                        :
                                         <BarsIcon color="#000" />
-                                        }
+                                    }
                                 </button>
                             </div>
 
@@ -71,20 +74,7 @@ const Header = () => {
                     </div>
                 </div>
             </div>
-            <div className="bottomHeader bg-white border-solid border-t border-[#f0f0f0] flex items-center justify-center">
-                <nav className="space-x-6 hidden md:flex ">
-                    <Link to="/">HOME </Link>
-                    <Link to="/">PAGES</Link>
-                    <Link to="/">SHOP</Link>
-                    <Link to="/">PORTFOLIO</Link>
-                    <Link to="/">NEWS</Link>
-                    <Link to="/">CONTACT</Link>
-                </nav>
-
-               
-            </div>
-        </header>
+        </>
     )
 }
-
-export default Header
+export default TopHeader

@@ -1,5 +1,5 @@
 {
-  "homepage": "https://Houzayfa-Zakieh.github.io/flowers/",
+  "homepage": "https://Houzayfa-Zakieh.github.io/flowers",
   "name": "flowers",
   "private": true,
   "version": "0.0.0",
@@ -11,15 +11,23 @@
     "preview": "vite preview",
     "tailwind": "tailwindcss --version",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-brands-svg-icons": "^6.7.2",
+    "@fortawesome/free-regular-svg-icons": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
     "@tailwindcss/postcss": "^4.0.15",
     "axios": "^1.8.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-intersection-observer": "^9.16.0",
     "react-router-dom": "^7.4.0",
-    "tailwindcss": "^4.0.15"
+    "swiper": "^11.2.6",
+    "tailwindcss": "^4.0.15",
+    "zustand": "^5.0.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",

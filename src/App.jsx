@@ -1,10 +1,9 @@
 import '/src/assets/styles/App.css';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
 import AuthLayout from './Layouts/AuthLayout';
 import UserLayout from './Layouts/UserLayout';
-import Home from './Pages/Home';
+import Home from './Pages/Home/Home';
 import Products from './Pages/Products';
 import ProductsInfo from './Pages/ProductsInfo';
 import Login from './Pages/Login';
