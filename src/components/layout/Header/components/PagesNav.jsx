@@ -38,7 +38,7 @@ const PagesNav = () => {
             </Link>
           </ul>
         </div>
-      
+
 
 
 
@@ -50,25 +50,25 @@ const PagesNav = () => {
           <ul className="space-y-2">
             <Link to="/">
               <li className="text-[#666] hover:text-[#E55472] text-[14px] transition-colors">
-              Google Map Locations
+                Google Map Locations
               </li>
             </Link>
             <Link to="/">
               <li className="text-[#666] hover:text-[#E55472] text-[14px] transition-colors">
-              404
+                404
               </li>
             </Link>
             <Link to="/">
               <li className="text-[#666] hover:text-[#E55472] text-[14px] transition-colors">
-              Contact
+                Contact
               </li>
             </Link>
             <Link to="/">
               <li className="text-[#666] hover:text-[#E55472] text-[14px] transition-colors">
-              Coming Soon
+                Coming Soon
               </li>
             </Link>
-           
+
           </ul>
         </div>
 

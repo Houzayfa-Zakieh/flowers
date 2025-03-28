@@ -228,5 +228,85 @@ header .bottomHeader nav a:hover {
 
 .cartImg:last-child {
   border: none;
-  
+
+}
+
+.cartButtons1 {
+  background-image: linear-gradient(45deg, #E55472, #E55472);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position-x: right;
+  border: 1px solid var(--decor);
+
+}
+
+.cartButtons1:hover {
+  background-image: linear-gradient(45deg, #565656, #565656);
+  background-size: 0 100%;
+  border: 1px solid var(--sub2);
+
+}
+
+.cartButtons2 {
+  background-image: linear-gradient(45deg, #565656, #565656);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position-x: left;
+  border: 1px solid var(--sub2);
+}
+
+.cartButtons2:hover {
+  background-image: linear-gradient(45deg, #E55472, #E55472);
+  background-size: 0 100%;
+  border: 1px solid var(--decor);
+}
+
+.cartButtons3 {
+  background-image: linear-gradient(45deg, #f7f7f7, #f7f7f7);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position-x: right;
+  border: 2px solid #f7f7f7;
+}
+
+.cartButtons3:hover {
+  background-image: linear-gradient(45deg, #fff, #fff);
+  background-size: 0 100%;
+}
+
+.FixedHeader {
+  transition: all 0.6s;
+}
+
+footer ul a li::before {
+  position: absolute;
+  content: "//";
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: inherit;
+  -o-transition: inherit;
+  transition: inherit;
+  opacity: 0;
+  visibility: hidden;
+  margin-left: -20px;
+  color: var(--decor);
+}
+
+footer ul a li {
+  padding-left: 20px;
+}
+footer h4{
+  padding-left:20px ;
+}
+footer ul a{
+  position: relative;
+}
+
+footer ul a:hover li::before {
+  opacity: 1;
+  visibility: visible;
+  margin-left: 0;
 }

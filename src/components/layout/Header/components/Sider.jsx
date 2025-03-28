@@ -42,59 +42,42 @@ const Sider = () => {
 
     return (
         <>
-            <div className={(open ? "sider show pt-[50px] pb-[50px] pr-[40px] bg-white pl-[40x] overflow-y-scroll overflow-x-hidden  h-screen w-[400px] shadow-lg" : "sider pt-[50px] pb-[50px] pr-[40px] bg-white pl-[40x] overflow-y-scroll overflow-x-hidden  h-screen w-[400px] shadow-lg")} >
+            <div className={(open ? "sider show pt-[50px] pb-[50px] pr-[40px] bg-white pl-[40x] overflow-y-scroll overflow-x-hidden  h-screen w-[350px] shadow-lg" : "sider pt-[50px] pb-[50px] pr-[40px] bg-white pl-[40x] overflow-y-scroll overflow-x-hidden  h-screen w-[350px] shadow-lg")} >
                 <div className="siderContainer flex flex-col gap-[20px] p-8 ">
-                    <div className="logo flex !w-[290px] items-center justify-between  border-b border-[#f7f7f7] pb-[20px]">
+                    <div className="logo flex !w-[250px] items-center justify-between  border-b border-[#f7f7f7] pb-[20px]">
                         <img src={Logo} alt="Logo" />
                         <button type="button" onClick={toggleOpen} >
-                        <CloseIcon color="#666"  />
+                            <CloseIcon color="#666" />
                         </button>
                     </div>
                     <form method='get' className=' pb-[20px]'>
-                        <Input className='pt-[1px] pl-[20px] w-[300px] h-[45px] border-1 border-solid bg-[#f7f7f7] border-[#f7f7f7]' placeholder="Search here..." />
+                        <Input className='pt-[1px] pl-[20px] w-[260px] h-[45px] border-1 border-solid bg-[#f7f7f7] border-[#f7f7f7]' placeholder="Search here..." />
                         <Button className="pl-[35px] pr-[20px] w-[35px] h-[45px]" type="submit" title={<FontAwesomeIcon className='hover:text-[#E55472] text-[20px]' icon={faMagnifyingGlass} />} />
                     </form>
                     <div className="flex flex-col gap-2">
-
-                        <div
-                            className="flex items-center justify-between gap-[10px] cursor-pointer"
-                            onClick={toggleShowList}
-                        >
+                        <div className="flex items-center justify-between gap-[10px] cursor-pointer" onClick={toggleShowList}>
                             <span className="text-[16px] pt-[8px] pb-[8px] hover:text-[#E55472] text-[#666]">HOME</span>
                             <PlusIcon color="#666" />
                         </div>
-
                         {showList && (
                             <ul className="mt-2 space-y-2">
                                 <Link to="/" className="block hover:text-[#E55472] text-[14px] text-[#666]">
-                                    <li
-                                        className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn"
-                                        style={{ animationDelay: "100ms" }}
-                                    >
+                                    <li className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn" style={{ animationDelay: "100ms" }}>
                                         Home Style - 01
                                     </li>
                                 </Link>
                                 <Link to="/" className="block hover:text-[#E55472] text-[14px] text-[#666]">
-                                    <li
-                                        className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn"
-                                        style={{ animationDelay: "200ms" }}
-                                    >
+                                    <li className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn" style={{ animationDelay: "200ms" }}>
                                         Home Style - 02
                                     </li>
                                 </Link>
                                 <Link to="/" className="block hover:text-[#E55472] text-[14px] text-[#666]">
-                                    <li
-                                        className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn"
-                                        style={{ animationDelay: "300ms" }}
-                                    >
+                                    <li className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn" style={{ animationDelay: "300ms" }}>
                                         Home Style - 03
                                     </li>
                                 </Link>
                                 <Link to="/" className="block hover:text-[#E55472] text-[14px] text-[#666]">
-                                    <li
-                                        className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn"
-                                        style={{ animationDelay: "400ms" }}
-                                    >
+                                    <li className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn" style={{ animationDelay: "400ms" }}>
                                         Home Style - 04
                                     </li>
                                 </Link>
@@ -102,13 +85,8 @@ const Sider = () => {
                         )}
                     </div>
                     <Link to="/" className='hover:text-[#E55472] text-[14px] pt-[8px] pb-[8px] text-[#666]'>ABOUT US</Link>
-
                     <div className="flex flex-col gap-2">
-
-                        <div
-                            className="flex items-center justify-between gap-[10px] cursor-pointer"
-                            onClick={toggleShowList2}
-                        >
+                        <div className="flex items-center justify-between gap-[10px] cursor-pointer" onClick={toggleShowList2}>
                             <span className="text-[16px] pt-[8px] pb-[8px] hover:text-[#E55472] text-[#666]">SHOP</span>
                             <PlusIcon color="#666" />
                         </div>
@@ -116,114 +94,71 @@ const Sider = () => {
                         {showList2 && (
                             <ul className="mt-2 space-y-2">
                                 <Link to="/" className="block hover:text-[#E55472] text-[14px] text-[#666]">
-                                    <li
-                                        className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn"
-                                        style={{ animationDelay: "100ms" }}
-                                    >
+                                    <li className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn" style={{ animationDelay: "100ms" }}>
                                         Shop
                                     </li>
                                 </Link>
                                 <Link to="/" className="block hover:text-[#E55472] text-[14px] text-[#666]">
-                                    <li
-                                        className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn"
-                                        style={{ animationDelay: "200ms" }}
-                                    >
+                                    <li className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn" style={{ animationDelay: "200ms" }}>
                                         Shop Grid
                                     </li>
                                 </Link>
                                 <Link to="/" className="block hover:text-[#E55472] text-[14px] text-[#666]">
-                                    <li
-                                        className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn"
-                                        style={{ animationDelay: "300ms" }}
-                                    >
+                                    <li className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn" style={{ animationDelay: "300ms" }}>
                                         Shop Left sidebar
                                     </li>
                                 </Link>
                                 <Link to="/" className="block hover:text-[#E55472] text-[14px] text-[#666]">
-                                    <li
-                                        className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn"
-                                        style={{ animationDelay: "400ms" }}
-                                    >
+                                    <li className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn" style={{ animationDelay: "400ms" }}>
                                         Shop right sidebar
                                     </li>
                                 </Link>
-
                                 <Link to="/" className="block hover:text-[#E55472] text-[14px] text-[#666]">
-                                    <li
-                                        className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn"
-                                        style={{ animationDelay: "100ms" }}
-                                    >
+                                    <li className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn" style={{ animationDelay: "100ms" }}>
                                         Shop details
                                     </li>
                                 </Link>
                                 <Link to="/" className="block hover:text-[#E55472] text-[14px] text-[#666]">
-                                    <li
-                                        className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn"
-                                        style={{ animationDelay: "200ms" }}
-                                    >
+                                    <li className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn" style={{ animationDelay: "200ms" }}>
                                         Cart
                                     </li>
                                 </Link>
                                 <Link to="/" className="block hover:text-[#E55472] text-[14px] text-[#666]">
-                                    <li
-                                        className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn"
-                                        style={{ animationDelay: "300ms" }}
-                                    >
+                                    <li className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn" style={{ animationDelay: "300ms" }}>
                                         Wishlist
                                     </li>
                                 </Link>
                                 <Link to="/" className="block hover:text-[#E55472] text-[14px] text-[#666]">
-                                    <li
-                                        className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn"
-                                        style={{ animationDelay: "400ms" }}
-                                    >
+                                    <li className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn" style={{ animationDelay: "400ms" }}>
                                         Checkout
                                     </li>
                                 </Link>
 
                                 <Link to="/" className="block hover:text-[#E55472] text-[14px] text-[#666]">
-                                    <li
-                                        className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn"
-                                        style={{ animationDelay: "100ms" }}
-                                    >
+                                    <li className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn" style={{ animationDelay: "100ms" }}>
                                         Order Tracking
                                     </li>
                                 </Link>
                                 <Link to="/" className="block hover:text-[#E55472] text-[14px] text-[#666]">
-                                    <li
-                                        className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn"
-                                        style={{ animationDelay: "200ms" }}
-                                    >
+                                    <li className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn" style={{ animationDelay: "200ms" }}>
                                         My Account
                                     </li>
                                 </Link>
                                 <Link to="/" className="block hover:text-[#E55472] text-[14px] text-[#666]">
-                                    <li
-                                        className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn"
-                                        style={{ animationDelay: "300ms" }}
-                                    >
+                                    <li className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn" style={{ animationDelay: "300ms" }}>
                                         Sign in
                                     </li>
                                 </Link>
                                 <Link to="/" className="block hover:text-[#E55472] text-[14px] text-[#666]">
-                                    <li
-                                        className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn"
-                                        style={{ animationDelay: "400ms" }}
-                                    >
+                                    <li className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn" style={{ animationDelay: "400ms" }}>
                                         Register
                                     </li>
                                 </Link>
                             </ul>
                         )}
                     </div>
-
-
                     <div className="flex flex-col gap-2">
-
-                        <div
-                            className="flex items-center justify-between gap-[10px] cursor-pointer"
-                            onClick={toggleShowList3}
-                        >
+                        <div className="flex items-center justify-between gap-[10px] cursor-pointer" onClick={toggleShowList3}>
                             <span className="text-[16px] pt-[8px] pb-[8px] hover:text-[#E55472] text-[#666]">NEWS</span>
                             <PlusIcon color="#666" />
                         </div>
@@ -231,42 +166,27 @@ const Sider = () => {
                         {showList3 && (
                             <ul className="mt-2 space-y-2">
                                 <Link to="/" className="block hover:text-[#E55472] text-[14px] text-[#666]">
-                                    <li
-                                        className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn"
-                                        style={{ animationDelay: "100ms" }}
-                                    >
+                                    <li className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn" style={{ animationDelay: "100ms" }}>
                                         News
                                     </li>
                                 </Link>
                                 <Link to="/" className="block hover:text-[#E55472] text-[14px] text-[#666]">
-                                    <li
-                                        className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn"
-                                        style={{ animationDelay: "200ms" }}
-                                    >
+                                    <li className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn" style={{ animationDelay: "200ms" }}>
                                         News Grid
                                     </li>
                                 </Link>
                                 <Link to="/" className="block hover:text-[#E55472] text-[14px] text-[#666]">
-                                    <li
-                                        className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn"
-                                        style={{ animationDelay: "300ms" }}
-                                    >
+                                    <li className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn" style={{ animationDelay: "300ms" }}>
                                         News Left sidebar
                                     </li>
                                 </Link>
                                 <Link to="/" className="block hover:text-[#E55472] text-[14px] text-[#666]">
-                                    <li
-                                        className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn"
-                                        style={{ animationDelay: "400ms" }}
-                                    >
+                                    <li className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn" style={{ animationDelay: "400ms" }}>
                                         News Right sidebar
                                     </li>
                                 </Link>
                                 <Link to="/" className="block hover:text-[#E55472] text-[14px] text-[#666]">
-                                    <li
-                                        className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn"
-                                        style={{ animationDelay: "400ms" }}
-                                    >
+                                    <li className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn" style={{ animationDelay: "400ms" }}>
                                         News details
                                     </li>
                                 </Link>
@@ -277,10 +197,7 @@ const Sider = () => {
 
                     <div className="flex flex-col gap-2">
 
-                        <div
-                            className="flex items-center justify-between gap-[10px] cursor-pointer"
-                            onClick={toggleShowList4}
-                        >
+                        <div className="flex items-center justify-between gap-[10px] cursor-pointer" onClick={toggleShowList4}>
                             <span className="text-[16px] pt-[8px] pb-[8px] hover:text-[#E55472] text-[#666]">PAGES</span>
                             <PlusIcon color="#666" />
                         </div>
@@ -288,76 +205,49 @@ const Sider = () => {
                         {showList4 && (
                             <ul className="mt-2 space-y-2">
                                 <Link to="/" className="block hover:text-[#E55472] text-[14px] text-[#666]">
-                                    <li
-                                        className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn"
-                                        style={{ animationDelay: "100ms" }}
-                                    >
+                                    <li className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn" style={{ animationDelay: "100ms" }}>
                                         About Us
                                     </li>
                                 </Link>
                                 <Link to="/" className="block hover:text-[#E55472] text-[14px] text-[#666]">
-                                    <li
-                                        className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn"
-                                        style={{ animationDelay: "200ms" }}
-                                    >
+                                    <li className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn" style={{ animationDelay: "200ms" }}>
                                         Portfolio
                                     </li>
                                 </Link>
                                 <Link to="/" className="block hover:text-[#E55472] text-[14px] text-[#666]">
-                                    <li
-                                        className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn"
-                                        style={{ animationDelay: "300ms" }}
-                                    >
+                                    <li className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn" style={{ animationDelay: "300ms" }}>
                                         Portfolio - 02
                                     </li>
                                 </Link>
                                 <Link to="/" className="block hover:text-[#E55472] text-[14px] text-[#666]">
-                                    <li
-                                        className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn"
-                                        style={{ animationDelay: "400ms" }}
-                                    >
+                                    <li className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn" style={{ animationDelay: "400ms" }}>
                                         Portfolio Details
                                     </li>
                                 </Link>
 
                                 <Link to="/" className="block hover:text-[#E55472] text-[14px] text-[#666]">
-                                    <li
-                                        className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn"
-                                        style={{ animationDelay: "100ms" }}
-                                    >
+                                    <li className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn" style={{ animationDelay: "100ms" }}>
                                         FAQ
                                     </li>
                                 </Link>
                                 <Link to="/" className="block hover:text-[#E55472] text-[14px] text-[#666]">
-                                    <li
-                                        className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn"
-                                        style={{ animationDelay: "200ms" }}
-                                    >
+                                    <li className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn" style={{ animationDelay: "200ms" }}>
                                         Google Map Locations
                                     </li>
                                 </Link>
                                 <Link to="/" className="block hover:text-[#E55472] text-[14px] text-[#666]">
-                                    <li
-                                        className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn"
-                                        style={{ animationDelay: "300ms" }}
-                                    >
+                                    <li className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn" style={{ animationDelay: "300ms" }}>
                                         404
                                     </li>
                                 </Link>
                                 <Link to="/" className="block hover:text-[#E55472] text-[14px] text-[#666]">
-                                    <li
-                                        className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn"
-                                        style={{ animationDelay: "400ms" }}
-                                    >
+                                    <li className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn" style={{ animationDelay: "400ms" }}>
                                         Contact
                                     </li>
                                 </Link>
 
                                 <Link to="/" className="block hover:text-[#E55472] text-[14px] text-[#666]">
-                                    <li
-                                        className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn"
-                                        style={{ animationDelay: "100ms" }}
-                                    >
+                                    <li className="pr-[25px] pl-[25px] pt-[5px] pb-[5px] animate-fadeIn" style={{ animationDelay: "100ms" }}>
                                         Coming Soon
                                     </li>
                                 </Link>
@@ -365,36 +255,27 @@ const Sider = () => {
                         )}
                     </div>
                     <Link to="/" className='hover:text-[#E55472] text-[14px] pt-[8px] pb-[8px] text-[#666]'>CONTACT</Link>
-
                     <div className='h-[1px] bg-[#f7f7f7] w-full'></div>
-
-
                     <div className='flex items-center gap-[20px]'>
                         <div className='border-1 border-[#666] p-[10px] pr-[15px]'>
                             <Link to="/"><FontAwesomeIcon className='hover:text-[#E55472] text-[#666]' icon={faUser} /></Link>
                         </div>
                         <Link to="/" className='hover:text-[#E55472] text-[14px] pt-[8px] pb-[8px] text-[#666]'>  My Account</Link>
                     </div>
-
                     <div className='flex items-center gap-[20px]'>
                         <div className='border-1 sup border-[#666] p-[10px] pr-[15px]'>
                             <sup className='flex items-center justify-center text-[#666]'>3</sup>
                             <Link to="/"><FontAwesomeIcon className='hover:text-[#E55472] text-[#666]' icon={faHeart} /></Link>
-
                         </div>
                         <Link to="/" className='hover:text-[#E55472] text-[14px] pt-[8px] pb-[8px] text-[#666]'>  Wishlist</Link>
                     </div>
-
                     <div className='flex items-center gap-[20px]'>
                         <div className='border-1 sup border-[#666] p-[10px] pr-[15px]'>
                             <sup className='flex items-center justify-center text-[#666]'>5</sup>
-
                             <Link to="/"><FontAwesomeIcon className='hover:text-[#E55472] text-[#666]' icon={faBagShopping} /></Link>
-
                         </div>
-                        <Link to="/" className='hover:text-[#E55472] text-[14px] pt-[8px] pb-[8px] text-[#666]'>  Shoping Cart</Link>
+                        <Link to="/" className='hover:text-[#E55472] text-[14px] pt-[8px] pb-[8px] text-[#666]'>Shopping Cart</Link>
                     </div>
-
                     <div className='h-[1px] bg-[#f7f7f7] w-full mt-[10px]'></div>
                     <div className='flex items-center justify-start gap-[20px] mt-[30px]'>
                         <div className="bg-[#f9f9f9] hover:bg-[#E55472] p-[10px]"><FacebookIcon color="#666" className="w-[25px]" /></div>
@@ -403,7 +284,6 @@ const Sider = () => {
                         <div className="bg-[#f9f9f9] hover:bg-[#E55472] p-[10px]"><InstagramIcon color="#666" className="w-[25px]" /></div>
                     </div>
                     <div>
-
                     </div>
                 </div>
             </div>

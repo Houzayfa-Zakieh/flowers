@@ -13,7 +13,7 @@ const FeaturesComponent = () => {
     ];
     return (
         <>
-            <div className='w-screen p-[10px] mt-[-80px]  flex items-center justify-center  relative z-[1]'>
+            <div className='w-[100%] p-[10px] mt-[-80px]  flex items-center justify-center  relative z-[1]'>
                 <div className=' h-full w-[77%] bg-[#fdfdfd] flex items-center justify-evenly gap-[20px] flex-wrap shadow-sm p-[10px] pt-[40px] pb-[40px]'>
                     {featuresData.map((feature) => (
                         <FeatureCard key={feature.id} img={feature.img} alt={feature.alt} h4={feature.h4} title={feature.title} className="flex gap-[20px] p-[10px]" imgClassName="w-[50px] h-[50px]" h4ClassName="text-[16px] !font-thin text-[#010101]" pClassName="text-[14px] !font-thin text-[#666]" />))}

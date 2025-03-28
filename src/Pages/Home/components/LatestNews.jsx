@@ -31,7 +31,7 @@ const LatestNews = () => {
     
     return (
         <>
-            <div className='w-screen min-h-[20vh] flex items-center justify-center flex-col gap-[40px] pt-[60px]'>
+            <div className='w-[100%] ml-[70px] min-h-[20vh] flex items-center justify-center flex-col gap-[40px] pb-[20px] pt-[60px]'>
 
                 <div className='flex flex-col items-center justify-center gap-[20px]'>
                     <h1 className='text-[#010101] text-[40px] !font-extrabold'>latest news</h1>
@@ -60,18 +60,12 @@ const LatestNews = () => {
                             ))}
                         </Swiper>
                         <div className='swiper-navigation'>
-                            <button
-                                ref={prevRef}
-                                className="absolute top-1/2 left-4 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 pointer-events-auto p-[15px] bg-[#fff] border border-[#dbdbdb] rounded-[50%] hover:bg-[#E55472] shadow-sm cursor-pointer"
-                            >
+                            <button ref={prevRef} className="absolute top-1/2 left-4 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 pointer-events-auto p-[15px] bg-[#fff] border border-[#dbdbdb] rounded-[50%] hover:bg-[#E55472] shadow-sm cursor-pointer">
                                 <FontAwesomeIcon icon={faArrowLeft} className="text-[#666] hover:text-[#fff] text-xl" />
                             </button>
                         </div>
                         <div className='swiper-navigation'>
-                            <button
-                                ref={nextRef}
-                                className="absolute top-1/2 right-4 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 pointer-events-auto p-[15px] bg-[#fff] border border-[#dbdbdb] rounded-[50%] hover:bg-[#E55472] shadow-sm cursor-pointer"
-                            >
+                            <button ref={nextRef} className="absolute top-1/2 right-4 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 pointer-events-auto p-[15px] bg-[#fff] border border-[#dbdbdb] rounded-[50%] hover:bg-[#E55472] shadow-sm cursor-pointer">
                                 <FontAwesomeIcon icon={faArrowRight} className="text-[#666] hover:text-[#fff] text-xl" />
                             </button>
                         </div>

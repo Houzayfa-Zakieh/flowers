@@ -35,7 +35,7 @@ const TopProducts = () => {
 
   return (
     <>
-      <div className='w-screen min-h-[20vh] flex items-center justify-center flex-col gap-[60px]'>
+      <div className='w-[100%] min-h-[20vh] flex items-center justify-center flex-col gap-[60px]'>
 
         <div className='flex flex-col items-center justify-center gap-[20px]'>
           <h1 className='text-[#010101] text-[40px] !font-extrabold'>top products</h1>
@@ -51,45 +51,38 @@ const TopProducts = () => {
               modules={[Navigation]}
               className="mySwiper"
               breakpoints={{
-                250: { slidesPerView: 1 },
-                640: { slidesPerView: 2 },
-                1050: { slidesPerView: 3 },
-                1270: { slidesPerView: 4 },
+                250: { slidesPerView: 1, spaceBetween: 0 },
+                640: { slidesPerView: 2, },
+                1050: { slidesPerView: 3, },
+                1270: { slidesPerView: 4, },
               }}>
               {topProductsData.map((product) => (
                 <SwiperSlide className="text-center flex items-center justify-center mySwiperSlide" key={product.id}>
                   <ProductsCard
-                  key={product.id}
+                    key={product.id}
                     img={product.img}
                     alt={product.alt}
                     offer={product.offer}
                     productTitle={product.productTitle}
                     price={product.price}
                     del={product.del}
-                    offerClassName="absolute offer-bg left-0 top-[20px] bg-[#E55472] !font-bold pt-[1px] pb-[1px] pr-[15px] pl-[15px] text-[13px] text-[#fff] rounded-[0 3px 3px 0]"
-                  />
+                    offerClassName="absolute offer-bg left-0 top-[20px] bg-[#E55472] !font-bold pt-[1px] pb-[1px] pr-[15px] pl-[15px] text-[13px] text-[#fff] rounded-[0 3px 3px 0]" />
                 </SwiperSlide>
               ))}
             </Swiper>
             <div className='swiper-navigation'>
-              <button
-                ref={prevRef}
-                className="absolute top-1/2 left-4 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 pointer-events-auto p-[15px] bg-[#fff] border border-[#dbdbdb] rounded-[50%] hover:bg-[#E55472] shadow-sm cursor-pointer"
-              >
+              <button ref={prevRef} className="absolute top-1/2 left-4 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 pointer-events-auto p-[15px] bg-[#fff] border border-[#dbdbdb] rounded-[50%] hover:bg-[#E55472] shadow-sm cursor-pointer">
                 <FontAwesomeIcon icon={faArrowLeft} className="text-[#666] hover:text-[#fff] text-xl" />
               </button>
             </div>
             <div className='swiper-navigation'>
-              <button
-                ref={nextRef}
-                className="absolute top-1/2 right-4 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 pointer-events-auto p-[15px] bg-[#fff] border border-[#dbdbdb] rounded-[50%] hover:bg-[#E55472] shadow-sm cursor-pointer"
-              >
+              <button ref={nextRef} className="absolute top-1/2 right-4 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 pointer-events-auto p-[15px] bg-[#fff] border border-[#dbdbdb] rounded-[50%] hover:bg-[#E55472] shadow-sm cursor-pointer" >
                 <FontAwesomeIcon icon={faArrowRight} className="text-[#666] hover:text-[#fff] text-xl" />
               </button>
             </div>
           </div>
         </div>
-        <div className='w-screen flex items-center justify-center min-h-[20vh] pt-[40px]'>
+        <div className='w-[100%] flex items-center pr-[20px] justify-center min-h-[20vh] pt-[40px]'>
           <img src={TopProducts2} className='w-[1400px] product2' alt="Top Products" />
         </div>
       </div>

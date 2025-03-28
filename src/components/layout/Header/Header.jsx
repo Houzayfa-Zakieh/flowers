@@ -3,6 +3,7 @@ import Sider from './components/Sider';
 import TopHeader from './components/TopHeader';
 import CartBar from './components/CartBar';
 import { useEffect } from 'react';
+import FixedHeader from './components/FixedHeader';
 // import { useEffect } from 'react';
 const Header = () => {
   useEffect(() => {
@@ -19,6 +20,7 @@ const Header = () => {
       <header className="bg-white">
         <TopHeader />
         <BottomHeader />
+        <FixedHeader/>
       </header>      
         <Sider  />
         <CartBar />

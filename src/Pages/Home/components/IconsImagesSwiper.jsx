@@ -11,13 +11,13 @@ const IconsImagesSwiper = () => {
     const IconsData = [{ id: 1, img: IconsImage1, alt: "Icons" }, { id: 2, img: IconsImage2, alt: "Icons" }, { id: 3, img: IconsImage3, alt: "Icons" }, { id: 4, img: IconsImage4, alt: "Icons" }, { id: 5, img: IconsImage5, alt: "Icons" }, { id: 6, img: IconsImage6, alt: "Icons" }, { id: 7, img: IconsImage1, alt: "Icons" }]
     return (
         <>
-            <div className='text-center flex items-center bg-[#f9f9f9] justify-center w-screen mt-[60px] p-0'>
+            <div className='text-center flex items-center bg-[#f9f9f9] justify-center w-[100%] mt-[60px] p-0'>
 
                 <Swiper
                     slidesPerView={6}
                     spaceBetween={30}
                     loop={true}
-                    className="mySwiper w-screen h-full text-center flex items-center justify-center"
+                    className="mySwiper w-[100%] h-full text-center flex items-center justify-center"
                     breakpoints={{
                         250: { slidesPerView: 2 },
                         563: { slidesPerView: 3 },

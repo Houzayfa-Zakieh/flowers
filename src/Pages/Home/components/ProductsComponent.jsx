@@ -17,8 +17,8 @@ const productsData = [
 const ProductsComponent = () => {
   return (
     <>
-      <div className='ProductsContainer w-screen min-h-[20vh] flex items-center justify-center gap-[40px] flex-col'>
-        <div className='w-screen flex items-center justify-center flex-col gap-[40px]'>
+      <div className='ProductsContainer w-[100%] min-h-[20vh] flex items-center justify-center gap-[40px] flex-col'>
+        <div className='w-[100%] flex items-center justify-center flex-col gap-[40px]'>
           <div className='flex items-center justify-center flex-col gap-[20px]'>
             <h1 className='text-[#010101] text-[40px] !font-extrabold'>new arrival items</h1>
             <div className='w-[90px] h-[2px] bg-[#E55472]'></div>
@@ -31,7 +31,7 @@ const ProductsComponent = () => {
             </div>
           </div>
         </div>
-        <div className='flex items-center w-screen justify-center gap-[20px] pr-[20px] flex-wrap pt-[40px] pb-[60px]'>
+        <div className='flex items-center w-[100%] justify-center gap-[20px] pr-[20px] flex-wrap pt-[40px] pb-[60px]'>
           <div className='w-[590px]'><Link><img src={Products2} className='w-full product2' alt="product" /></Link></div>
           <div className='w-[590px]'><Link><img src={Products2} className='w-full product2' alt="product" /></Link></div>
         </div>
