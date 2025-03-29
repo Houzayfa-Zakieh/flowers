@@ -4,10 +4,10 @@ const PagesNav = () => {
   return (
     <div className=" border-t-2 border-[#E55472] z-9999 relative mt-[20px] bg-white shadow-lg p-4 pl-[30px] transition-all duration-300">
 
-      <div className=" pagesNav flex flex-wrap overflow-y-scroll h-[300px] justify-between gap-[60px] xl:flex-nowrap lg:flex-wrap ">
+      <div className=" pagesNav flex flex-wrap overflow-y-auto pt-[15px] h-[300px] justify-between gap-[60px] xl:flex-nowrap lg:flex-wrap ">
 
         <div className="flex-1 min-h-[200px] min-w-[200px]">
-          <span className="block mb-2 text-lg font-semibold text-[#666] text-[14px] hover:text-[#E55472] bg-[#f7f7f7] p-[5px]">
+          <span className="block mb-2 text-lg font-semibold text-[#666] cursor-default text-[14px] hover:text-[#E55472] bg-[#f7f7f7] p-[5px]">
             Inner Pages
           </span>
           <ul className="space-y-2">
@@ -44,7 +44,7 @@ const PagesNav = () => {
 
 
         <div className="flex-1 min-h-[200px] min-w-[200px]">
-          <span className="block mb-2 text-lg font-semibold text-[#666] text-[14px]  hover:text-[#E55472] bg-[#f7f7f7] p-[5px]">
+          <span className="block mb-2 text-lg font-semibold text-[#666] text-[14px] cursor-default hover:text-[#E55472] bg-[#f7f7f7] p-[5px]">
             Inner Pages
           </span>
           <ul className="space-y-2">
@@ -73,7 +73,7 @@ const PagesNav = () => {
         </div>
 
         <div className="flex-1 min-h-[200px] min-w-[200px]">
-          <span className="block mb-2 text-lg font-semibold text-[#666] text-[14px]  hover:text-[#E55472] bg-[#f7f7f7] p-[5px]">
+          <span className="block mb-2 text-lg font-semibold text-[#666] text-[14px] cursor-default hover:text-[#E55472] bg-[#f7f7f7] p-[5px]">
             Shop Pages
           </span>
           <ul className="space-y-2">
@@ -106,7 +106,7 @@ const PagesNav = () => {
         </div>
 
         <div className="flex-1 min-h-[200px] min-w-[200px]" >
-          <span className="block mb-2 text-lg font-semibold text-[#666] text-[14px]  hover:text-[#E55472] bg-[#f7f7f7] p-[5px]">
+          <span className="block mb-2 text-lg font-semibold text-[#666] text-[14px] cursor-default hover:text-[#E55472] bg-[#f7f7f7] p-[5px]">
             Blog Pages
           </span>
           <ul className="space-y-2">

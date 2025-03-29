@@ -14,56 +14,49 @@ import Logo from '../../../../assets/images/logo.webp';
 const TopHeader = () => {
   const { open, setOpen } = useStore();
   const { cart, setCart } = UseStore2();
-  
+
   return (
     <div className="topHeader flex items-center flex-wrap justify-center">
-      <div className="topHeader-container pt-4 pb-4 w-full px-5">
-        <div className="row flex flex-wrap items-center justify-between w-full max-w-[1310px] mx-auto">
+      <div className="topHeader-container pt-4 pb-4 w-full ">
+        <div className="row flex flex-wrap items-center justify-evenly w-[100%]">
 
-          <div className="logo w-auto md:w-[240px] px-5 flex items-center justify-center whitespace-nowrap">
+          <div className="logo w-auto md:w-[240px] flex items-center justify-center whitespace-nowrap">
             <Link to="/">
               <img src={Logo} alt="logo" />
             </Link>
           </div>
 
-          <div className="searchField flex items-center justify-between px-5 flex-1">
-            <div className="flex items-center justify-between mr-5 gap-5">
+          <div className="searchField flex items-center justify-between gap-[30px]">
+            <div className="flex items-center justify-between gap-5">
               <PhoneIcon color="#010101" />
               <div className="flex flex-col items-start justify-start">
-                <h6 className="text-[#666] text-xs">PHONE</h6>
+                <h6 className="text-[#666] !font-thin text-[13px]">PHONE</h6>
                 <p>
-                  <a className="text-[#000] text-center text-xs" href="tel:012345676">
+                  <a className="text-[#000] text-center !font-thin text-[13px]" href="tel:012345676">
                     +0123-456-789
                   </a>
                 </p>
               </div>
             </div>
-            <form method="get" className="flex flex-1 items-center pt-6 pb-6">
-              <Input
-                className="px-5 py-1 w-full md:w-[500px] h-[45px] border border-solid border-[#f0f0f0] rounded-full"
-                placeholder="Search here..."
-              />
-              <Button
-                className="px-4 w-[48px] h-[45px]"
-                type="submit"
-                title={<FontAwesomeIcon className="hover:text-[#E55472]" icon={faMagnifyingGlass} />}
-              />
+            <form method="get" className="!w-[500px] flex items-center pt-6 pb-6 relative">
+              <Input className="px-5 py-1 w-[100%] outline-[#E55472] h-[45px] border border-solid border-[#f0f0f0] rounded-full !font-thin" placeholder="Search here..." />
+              <Button className="w-[48px] h-[45px] absolute right-[5px]" type="submit" title={<FontAwesomeIcon className="hover:text-[#E55472]" icon={faMagnifyingGlass} />} />
             </form>
           </div>
 
-          <div className="cart w-auto md:w-[240px] flex items-center justify-center gap-5 px-5">
+          <div className="cart w-auto md:w-[240px] flex items-center justify-center gap-5">
             <button onClick={() => setCart(!cart)} className="flex items-center gap-5 cursor-pointer">
               <div className="shoppingF relative">
-                <div className="shopping">
-                  <sup className="absolute top-0 right-0 flex items-center justify-center text-xs bg-red-500 rounded-full w-4 h-4 text-white">
+                <div className="shopping relative">
+                  <sup className="absolute top-[-5px] right-[-15px] flex items-center justify-center text-[#fff] text-[12px] bg-[#E55472] rounded-[50%] w-[20px] h-[20px] ">
                     2
                   </sup>
                   <BagShoppingIcon />
                 </div>
               </div>
               <div className="flex flex-col items-start justify-start">
-                <span className="text-[#666] text-xs">YOUR CART</span>
-                <span className="text-[#E55472] text-xs">$89.25</span>
+                <span className="text-[#666] !font-thin text-[12px]">YOUR CART</span>
+                <span className="text-[#E55472] text-[12px]">$89.25</span>
               </div>
             </button>
             <div className="open block md:hidden">

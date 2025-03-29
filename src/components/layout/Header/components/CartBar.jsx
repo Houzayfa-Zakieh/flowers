@@ -3,6 +3,7 @@ import UseStore2 from "./UseStore2"
 import { Link } from "react-router-dom";
 import cart1 from '../../../../assets/images/products1.webp'
 import CartCards from "./CartCards";
+
 const CartBar = () => {
     const { cart, toggleCart } = UseStore2();
     const cartData = [
@@ -13,9 +14,9 @@ const CartBar = () => {
     ];
     return (
         <>
-            <div className={(cart ? "cart2 show w-[350px] min-h-[100vh] bg-white pr-[10px] pl-[30px] pt-[20px] pb-[20px] shadow-sm" : "cart2 w-[400px] min-h-[100vh] bg-white pr-[10px] pl-[30px] pt-[20px] pb-[20px] shadow-sm")} id="cart">
+            <div className={(cart ? "cart2 show w-[350px] h-[100vh] fixed right-[-400px] top-0 z-100 bg-white pr-[10px] pl-[30px] pt-[20px] pb-[20px] shadow-sm overflow-y-auto overflow-x-hidden" : "cart2 w-[350px] h-[100vh] bg-white pr-[10px] pl-[30px] pt-[20px] pb-[20px] shadow-sm fixed right-[-400px] top-0 z-100 overflow-y-auto overflow-x-hidden")} id="cart">
                 <div className="cartContainer flex items-start justify-start flex-col pr-[20px] gap-[20px]">
-                    <div className="pb-[30px] flex items-center justify-between w-[290px] border-b-2  border-[#f0f0f0]">
+                    <div className="pb-[30px] flex items-center justify-between w-[290px] border-b-2 border-[#f0f0f0]">
                         <span className="text-[16px] text-[#666] !font-thin">CART</span>
                         <button type="button" className="cursor-pointer" onClick={toggleCart} >
                             <CloseIcon color="#666" className="w-[20px]" />
@@ -28,10 +29,9 @@ const CartBar = () => {
                     </div>
                     <div className="w-[290px] pt-[15px] pb-[15px] flex item-center justify-between border-t-2 border-b-2 border-[#f0f0f0] gap-[20px]">
                         <h5 className="text-[16px] text-[#010101] !font-thin">Subtotal:</h5>
-                        <span className="text-[#E55472] text-[16px] !font-thin">
-                            $310.00</span>
+                        <span className="text-[#E55472] text-[16px] !font-thin">$310.00</span>
                     </div>
-                    <div className="w-[290px] pt-[25px] pb-[15px] flex item-center justify-between gap-[20px] ">
+                    <div className="w-[290px] pt-[25px] pb-[15px] flex item-center justify-between gap-[20px]">
                         <Link to="/" className="text-[13px] text-[#fff] text-center hover:text-[#212529] cartButtons1 pt-[10px] pb-[10px] pr-[20px] pl-[20px]">VIEW CART</Link>
                         <Link to="/" className="text-[13px] text-[#fff] text-center hover:text-[#212529] cartButtons2 pt-[10px] pb-[10px] pr-[20px] pl-[20px]">CHECKOUT</Link>
                     </div>
@@ -42,4 +42,4 @@ const CartBar = () => {
     )
 }
 
-export default CartBar
+export default CartBar;

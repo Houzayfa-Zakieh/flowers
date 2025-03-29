@@ -8,6 +8,9 @@ import { useEffect } from "react";
 import LatestNews from './components/LatestNews';
 import IconsImagesSwiper from './components/IconsImagesSwiper';
 import ProductsInfo from '../../components/common/ProductsInfo';
+import WishList from '../../components/common/WishList';
+import AddCart from '../../components/common/AddCart';
+import GoUpButton from '../../components/common/GoUpButton';
 const Home = () => {
     useEffect(() => {
         document.title = "Fiama - Flower Shop eCommerce HTML Template";
@@ -29,6 +32,9 @@ const Home = () => {
             <IconsImagesSwiper />
             </div>
             <ProductsInfo/>
+            <WishList/>
+            <AddCart/>
+            <GoUpButton/>
         </>
     )
 }

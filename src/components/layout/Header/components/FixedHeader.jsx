@@ -6,7 +6,12 @@ import NewsNav from './NewsNav';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Logo from '../../../../assets/images/logo.webp'
+import useStore from './useStore';
+import BarsIcon from '../../../icons/BarsIcon';
+import CloseIcon from '../../../icons/CloseIcon';
 const FixedHeader = () => {
+    const { open, setOpen } = useStore();
+
 
     const [showHomeMenu, setShowHomeMenu] = useState(false);
     const [showPageMenu, setShowPageMenu] = useState(false);
@@ -37,7 +42,7 @@ const FixedHeader = () => {
 
     return (
         <>
-            <div className={`h-[66px] bottomHeader FixedHeader bg-white fixed top-0 z-1000 left-0 flex w-[100%] items-center justify-around shadow-xl ${isVisible ? 'top-[0px] flex ' : ' top-[-100px] hidden'}`}>
+            <div className={`h-[66px] bottomHeader FixedHeader bg-white fixed top-0 z-100 left-0 flex w-[100%] items-center justify-around shadow-xl ${isVisible ? 'top-[0px] flex ' : ' top-[-100px] hidden'}`}>
                 <Link to="/"><img src={Logo} alt="logo" /></Link>
                 <nav className="space-x-6 hidden md:flex pr-[20px] pl-[20px] relative flex items-center justify-around">
                     <div className="relative" onMouseEnter={() => setShowHomeMenu(true)} onMouseLeave={() => setShowHomeMenu(false)} >
@@ -98,7 +103,11 @@ const FixedHeader = () => {
 
                     <Link to="/" className="text-[#666]">CONTACT</Link>
                 </nav>
-
+                <div className="open block md:hidden">
+              <button type="button" onClick={() => setOpen(!open)}>
+                {open ? <CloseIcon color="#000" /> : <BarsIcon color="#000" />}
+              </button>
+            </div>
             </div>
         </>
     )

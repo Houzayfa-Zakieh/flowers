@@ -3,10 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @font-face {
-    font-family: mainFont;
-    src: url(../../../public/fonts/lightcase.ttf);
-} */
 header svg {
   width: 20px;
 }
@@ -35,39 +31,6 @@ svg {
   --sub4: #0f0f0f;
 }
 
-header form {
-  position: relative;
-}
-
-header form input {
-  position: relative;
-  outline-color: var(--decor);
-  outline-width: initial;
-}
-
-header form button {
-  position: absolute;
-  right: 0px;
-  top: 25px;
-  cursor: pointer;
-}
-
-.shopping sup {
-  color: var(--main);
-  background-color: var(--decor);
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  font-size: 12px;
-  position: absolute;
-  right: -15px;
-
-}
-
-.shopping {
-  position: relative;
-}
-
 @media (max-width: 1200px) {
   .searchField {
     display: none;
@@ -90,12 +53,9 @@ header form button {
   .logo {
     width: 330px;
   }
-
-
 }
 
 @media (max-width: 768px) {
-
   .cart {
     width: 240px !important;
   }
@@ -103,7 +63,6 @@ header form button {
   .logo {
     width: 240px !important;
   }
-
 }
 
 @media (max-width:600px) {
@@ -143,37 +102,8 @@ header .bottomHeader nav a:hover {
   cursor: pointer;
 }
 
-.sider form {
-  position: relative;
-}
-
-.sider form input {
-  position: relative;
-  outline-color: var(--decor);
-  outline-width: initial;
-}
-
-.sider form button {
-  position: absolute;
-  right: 0px;
-  top: 0px;
-  cursor: pointer;
-}
-
-.sider .sup {
-  position: relative;
-}
-
 .sider .sup svg {
   position: relative;
-}
-
-.sider sup {
-  width: 20px;
-  font-size: 12px;
-  position: absolute;
-  right: -3px;
-  top: 15px;
 }
 
 .sider::-webkit-scrollbar {
@@ -190,11 +120,18 @@ header .bottomHeader nav a:hover {
   background-color: #666;
 }
 
-.sider {
-  position: fixed;
-  left: -400px;
-  z-index: 100;
-  top: 0;
+.cart2::-webkit-scrollbar {
+  width: 3px;
+  border-radius: 30px;
+}
+
+.cart2::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+
+}
+
+.cart2::-webkit-scrollbar-thumb {
+  background-color: #666;
 }
 
 .sider.show {
@@ -215,20 +152,12 @@ header .bottomHeader nav a:hover {
   background-color: #666;
 }
 
-.cart2 {
-  position: fixed;
-  right: -400px;
-  z-index: 100;
-  top: 0;
-}
-
 .cart2.show {
   right: 0;
 }
 
 .cartImg:last-child {
   border: none;
-
 }
 
 .cartButtons1 {
@@ -298,10 +227,12 @@ footer ul a li::before {
 footer ul a li {
   padding-left: 20px;
 }
-footer h4{
-  padding-left:20px ;
+
+footer h4 {
+  padding-left: 20px;
 }
-footer ul a{
+
+footer ul a {
   position: relative;
 }
 

@@ -42,17 +42,17 @@ const Sider = () => {
 
     return (
         <>
-            <div className={(open ? "sider show pt-[50px] pb-[50px] pr-[40px] bg-white pl-[40x] overflow-y-scroll overflow-x-hidden  h-screen w-[350px] shadow-lg" : "sider pt-[50px] pb-[50px] pr-[40px] bg-white pl-[40x] overflow-y-scroll overflow-x-hidden  h-screen w-[350px] shadow-lg")} >
+            <div className={(open ? "sider show pt-[50px] pb-[50px] pr-[40px] bg-white pl-[40x] overflow-y-auto overflow-x-hidden fixed left-[-400px] z-100 top-0 h-screen w-[350px] shadow-lg" : "sider pt-[50px] fixed left-[-400px] z-100 top-0 pb-[50px] pr-[40px] bg-white pl-[40x] overflow-y-auto overflow-x-hidden h-screen w-[350px] shadow-lg")} >
                 <div className="siderContainer flex flex-col gap-[20px] p-8 ">
-                    <div className="logo flex !w-[250px] items-center justify-between  border-b border-[#f7f7f7] pb-[20px]">
+                    <div className="logo flex !w-[250px] items-center justify-between border-b border-[#f7f7f7] pb-[20px]">
                         <img src={Logo} alt="Logo" />
                         <button type="button" onClick={toggleOpen} >
                             <CloseIcon color="#666" />
                         </button>
                     </div>
-                    <form method='get' className=' pb-[20px]'>
-                        <Input className='pt-[1px] pl-[20px] w-[260px] h-[45px] border-1 border-solid bg-[#f7f7f7] border-[#f7f7f7]' placeholder="Search here..." />
-                        <Button className="pl-[35px] pr-[20px] w-[35px] h-[45px]" type="submit" title={<FontAwesomeIcon className='hover:text-[#E55472] text-[20px]' icon={faMagnifyingGlass} />} />
+                    <form method='get' className='relative pb-[20px]'>
+                        <Input className='pt-[1px] pl-[20px] outline-[#E55472] w-[260px] h-[45px] border-1 border-solid bg-[#f7f7f7] border-[#f7f7f7]' placeholder="Search here..." />
+                        <Button className="pl-[35px] pr-[20px] w-[35px] h-[45px] absolute right-0 top-0 cursor-pointer" type="submit" title={<FontAwesomeIcon className='hover:text-[#E55472] text-[20px]' icon={faMagnifyingGlass} />} />
                     </form>
                     <div className="flex flex-col gap-2">
                         <div className="flex items-center justify-between gap-[10px] cursor-pointer" onClick={toggleShowList}>
@@ -263,15 +263,15 @@ const Sider = () => {
                         <Link to="/" className='hover:text-[#E55472] text-[14px] pt-[8px] pb-[8px] text-[#666]'>  My Account</Link>
                     </div>
                     <div className='flex items-center gap-[20px]'>
-                        <div className='border-1 sup border-[#666] p-[10px] pr-[15px]'>
-                            <sup className='flex items-center justify-center text-[#666]'>3</sup>
+                        <div className='border-1 sup border-[#666] p-[10px] pr-[15px] relative'>
+                            <sup className='flex items-center justify-center text-[#666] absolute top-[15px] right-[-3px] w-[20px] text-[12px]'>3</sup>
                             <Link to="/"><FontAwesomeIcon className='hover:text-[#E55472] text-[#666]' icon={faHeart} /></Link>
                         </div>
                         <Link to="/" className='hover:text-[#E55472] text-[14px] pt-[8px] pb-[8px] text-[#666]'>  Wishlist</Link>
                     </div>
                     <div className='flex items-center gap-[20px]'>
-                        <div className='border-1 sup border-[#666] p-[10px] pr-[15px]'>
-                            <sup className='flex items-center justify-center text-[#666]'>5</sup>
+                        <div className='border-1 sup border-[#666] p-[10px] pr-[15px] relative'>
+                            <sup className='flex items-center justify-center text-[#666] absolute top-[15px] w-[20px] right-[-3px] text-[12px]'>5</sup>
                             <Link to="/"><FontAwesomeIcon className='hover:text-[#E55472] text-[#666]' icon={faBagShopping} /></Link>
                         </div>
                         <Link to="/" className='hover:text-[#E55472] text-[14px] pt-[8px] pb-[8px] text-[#666]'>Shopping Cart</Link>
