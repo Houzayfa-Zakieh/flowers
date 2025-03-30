@@ -6,11 +6,6 @@ import TopProducts from './components/TopProducts';
 import '../../assets/styles/home.css';
 import { useEffect } from "react";
 import LatestNews from './components/LatestNews';
-import IconsImagesSwiper from './components/IconsImagesSwiper';
-import ProductsInfo from '../../components/common/ProductsInfo';
-import WishList from '../../components/common/WishList';
-import AddCart from '../../components/common/AddCart';
-import GoUpButton from '../../components/common/GoUpButton';
 const Home = () => {
     useEffect(() => {
         document.title = "Fiama - Flower Shop eCommerce HTML Template";
@@ -24,17 +19,11 @@ const Home = () => {
                     <BannerComponent />
                     <ProductsComponent />
                 </div>
-                <div className='flex flex-col w-[100%] items-center justify-center gap-[60px]'>
-
+                <div className='flex flex-col w-[100%] items-center justify-center gap-[30px]'>
                     <TopProducts className=' w-[100%]' />
                     <LatestNews className='w-[100%]' />
                 </div>
-            <IconsImagesSwiper />
             </div>
-            <ProductsInfo/>
-            <WishList/>
-            <AddCart/>
-            <GoUpButton/>
         </>
     )
 }

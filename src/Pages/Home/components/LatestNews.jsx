@@ -34,7 +34,7 @@ const LatestNews = () => {
             <div className='w-[100%] ml-[70px] min-h-[20vh] flex items-center justify-center flex-col gap-[40px] pb-[20px] pt-[60px]'>
 
                 <div className='flex flex-col items-center justify-center gap-[20px]'>
-                    <h1 className='text-[#010101] text-[40px] !font-extrabold'>latest news</h1>
+                    <h1 className='text-[#010101] text-[40px] text-center !font-extrabold'>latest news</h1>
                     <div className='w-[90px] h-[2px] bg-[#E55472]'></div>
                 </div>
                 <div className="topProducts min-h-[20vh] w-full flex items-center justify-center group">

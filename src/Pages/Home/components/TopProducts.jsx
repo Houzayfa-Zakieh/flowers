@@ -5,10 +5,10 @@ import { Navigation } from 'swiper/modules';
 import { useRef, useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import ProductsCard from "../components/ProductsCard";
+import ProductsCard from '../../../components/common/ProductsCard';
 import Products1 from '../../../assets/images/products1.webp';
 import TopProducts2 from '../../../assets/images/TopProducts2.webp';
-
+import { Link } from 'react-router-dom';
 
 const TopProducts = () => {
   const topProductsData = [
@@ -38,7 +38,7 @@ const TopProducts = () => {
       <div className='w-[100%] min-h-[20vh] flex items-center justify-center flex-col gap-[60px]'>
 
         <div className='flex flex-col items-center justify-center gap-[20px]'>
-          <h1 className='text-[#010101] text-[40px] !font-extrabold'>top products</h1>
+          <h1 className='text-[#010101] text-[40px] text-center !font-extrabold'>top products</h1>
           <div className='w-[90px] h-[2px] bg-[#E55472]'></div>
         </div>
         <div className="topProducts min-h-[20vh] w-full flex items-center justify-center group">
@@ -83,7 +83,7 @@ const TopProducts = () => {
           </div>
         </div>
         <div className='w-[100%] flex items-center pr-[20px] justify-center min-h-[20vh] pt-[40px]'>
-          <img src={TopProducts2} className='w-[1400px] product2' alt="Top Products" />
+          <Link to="/shop"><img src={TopProducts2} className='w-[1400px] product2' alt="Top Products" /></Link>
         </div>
       </div>
 

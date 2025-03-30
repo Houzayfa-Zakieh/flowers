@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { faShuffle } from '@fortawesome/free-solid-svg-icons';
-import {UseStore3} from "../../../assets/UseStore3";
-import {UseStore5} from "../../../assets/UseStore3";
+import {UseStore3} from "../../assets/UseStore3";
+import {UseStore5} from "../../assets/UseStore3";
 const ProductsCard = (props) => {
     const {show , toggleShow} = UseStore3();
     const {show2 , toggleShow2} = UseStore5();
@@ -26,7 +26,7 @@ const ProductsCard = (props) => {
                                     <button to="/"><FontAwesomeIcon icon={faMagnifyingGlass} className="text-[#fff] cursor-pointer w-[20px]" /></button>
                                 </li>
                                 <li className="bg-[#666] border-r-[0.5px] border-dotted border-[#f9f9f9] flex items-center justify-center !text-center cursor-pointer w-[140px] h-[50px] hover:bg-[#E55472] border-l-[0.5px] border-dotted cursor-pointer" title="Add to Cart" onClick={toggleShow2}>
-                                    <button to="/" className="text-[#fff] !font-thin text-[14px]">ADD TO CART</button>
+                                    <button to="/" className="text-[#fff] !font-thin text-[14px] cursor-pointer">ADD TO CART</button>
                                 </li>
                                 <li className="bg-[#666] hover:bg-[#E55472] w-[74px] text-center h-[50px] flex items-center justify-center cursor-pointer" onClick={toggleShow} title="Quick View">
                                     <button to="/"><FontAwesomeIcon icon={faShuffle} className="text-[#fff] w-[20px] cursor-pointer" /></button>
@@ -56,7 +56,7 @@ const ProductsCard = (props) => {
                         </div>
                     </div>
                     <div className="flex items-center justify-center flex-col gap-[10px] pt-[25px]">
-                        <h2 className="text-[14px] text-[#010101] !font-thin hover:text-[#E55472]"><Link>{props.productTitle}</Link> </h2>
+                        <h2 className="text-[14px] text-[#010101] hover:text-[#E55472]"><Link className="!font-thin">{props.productTitle}</Link> </h2>
                         <div className="flex items-center justify-center gap-[20px]">
                             <span className="text-[16px] text-[#666]">{props.price}</span>
                             <del className="text-[12.8px] text-[#666]">{props.del}</del>

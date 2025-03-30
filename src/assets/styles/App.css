@@ -241,3 +241,6 @@ footer ul a:hover li::before {
   visibility: visible;
   margin-left: 0;
 }
+.rangeButtons,.rangeLine{
+  transition: none;
+}

@@ -8,7 +8,7 @@ const AboutOurShop = () => {
   return (
     <>
      <div className="flex items-start justify-start gap-[20px] flex-col pr-[20px] pl-[20px]">
-        <h4 className="text-[#fff] text-[14px]">ABOUT OUR SHOP</h4>
+        <h4 className="text-[#fff] text-[14px] !pl-[0px]">ABOUT OUR SHOP</h4>
         <p className="text-[#999] text-[14px] !font-thin">Lorem ipsum dolor sit amet, consectetur adipisicing <br /> elit, sed do eiusmo incididunt ut labore et dolore</p>
         <div className='flex items-start gap-[10px] text-[#999] text-[14px] flex-col'>
           <p><FontAwesomeIcon icon={faLocationDot} /> Brooklyn, New York, United States</p>

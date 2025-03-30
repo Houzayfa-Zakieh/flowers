@@ -1,7 +1,7 @@
 import Products1 from '../../../assets/images/products1.webp';
 import Products2 from '../../../assets/images/products2.webp';
 import { Link } from 'react-router-dom';
-import ProductsCard from '../components/ProductsCard';
+import ProductsCard from '../../../components/common/ProductsCard';
 
 const productsData = [
   { id: 1, img: Products1, alt: "Products1", offer: "10%", productTitle: "PINK FLOWER TREE", price: "$18.00 ", del: "$21.00" },
@@ -20,7 +20,7 @@ const ProductsComponent = () => {
       <div className='ProductsContainer w-[100%] min-h-[20vh] flex items-center justify-center gap-[40px] flex-col'>
         <div className='w-[100%] flex items-center justify-center flex-col gap-[40px]'>
           <div className='flex items-center justify-center flex-col gap-[20px]'>
-            <h1 className='text-[#010101] text-[40px] !font-extrabold'>new arrival items</h1>
+            <h1 className='text-[#010101] text-[40px] text-center !font-extrabold'>new arrival items</h1>
             <div className='w-[90px] h-[2px] bg-[#E55472]'></div>
           </div>
           <div className='flex items-center justify-center w-full min-h-[20vh] pr-[50px] pl-[50px]'>
@@ -32,8 +32,8 @@ const ProductsComponent = () => {
           </div>
         </div>
         <div className='flex items-center w-[100%] justify-center gap-[20px] pr-[20px] flex-wrap pt-[40px] pb-[60px]'>
-          <div className='w-[590px]'><Link><img src={Products2} className='w-full product2' alt="product" /></Link></div>
-          <div className='w-[590px]'><Link><img src={Products2} className='w-full product2' alt="product" /></Link></div>
+          <div className='w-[590px]'><Link to="/shop"><img src={Products2} className='w-full product2' alt="product" /></Link></div>
+          <div className='w-[590px]'><Link to="/shop"><img src={Products2} className='w-full product2' alt="product" /></Link></div>
         </div>
       </div>
     </>

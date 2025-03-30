@@ -20,12 +20,12 @@ const BottomHeader = () => {
       <div className="bottomHeader bg-white border-solid border-t border-[#f0f0f0] flex items-center justify-center">
         <nav className="space-x-6 hidden md:flex pr-[20px] pl-[20px] relative flex items-center justify-around">
           <div className="relative" onMouseEnter={() => setShowHomeMenu(true)} onMouseLeave={() => setShowHomeMenu(false)}>
-            <Link to="/" className="text-[#666] !font-thin">HOME</Link>
+            <Link to="#" className="text-[#666] !font-thin">HOME</Link>
             {showHomeMenu && <HomeNav />}
           </div>
 
           <div className="relative" onMouseEnter={() => setShowPageMenu(true)} onMouseLeave={() => setShowPageMenu(false)} >
-            <Link to="/" className="text-[#666] hover:text-[#E55472] !font-thin transition-colors">
+            <Link to="#" className="text-[#666] hover:text-[#E55472] !font-thin transition-colors">
               PAGES
             </Link>
             {showPageMenu && (
@@ -37,7 +37,7 @@ const BottomHeader = () => {
 
 
           <div className="relative" onMouseEnter={() => setShowShopMenu(true)} onMouseLeave={() => setShowShopMenu(false)} >
-            <Link to="/" className="text-[#666] hover:text-[#E55472] !font-thin transition-colors">
+            <Link to="#" className="text-[#666] hover:text-[#E55472] !font-thin transition-colors">
               SHOP
             </Link>
             {showShopMenu && (
@@ -47,12 +47,8 @@ const BottomHeader = () => {
             )}
           </div>
 
-          <div
-            className="relative"
-            onMouseEnter={() => setShowPortfolioMenu(true)}
-            onMouseLeave={() => setShowPortfolioMenu(false)}
-          >
-            <Link to="/" className="text-[#666] hover:text-[#E55472] !font-thin transition-colors">
+          <div className="relative" onMouseEnter={() => setShowPortfolioMenu(true)} onMouseLeave={() => setShowPortfolioMenu(false)}>
+            <Link to="#" className="text-[#666] hover:text-[#E55472] !font-thin transition-colors">
               PORTFOLIO
             </Link>
             {showPortfolioMenu && (
@@ -63,12 +59,8 @@ const BottomHeader = () => {
           </div>
 
 
-          <div
-            className="relative"
-            onMouseEnter={() => setShowNewsMenu(true)}
-            onMouseLeave={() => setShowNewsMenu(false)}
-          >
-            <Link to="/" className="text-[#666] hover:text-[#E55472] !font-thin transition-colors">
+          <div className="relative" onMouseEnter={() => setShowNewsMenu(true)} onMouseLeave={() => setShowNewsMenu(false)}>
+            <Link to="#" className="text-[#666] hover:text-[#E55472] !font-thin transition-colors">
               NEWS
             </Link>
             {showNewsMenu && (
@@ -79,7 +71,7 @@ const BottomHeader = () => {
           </div>
 
 
-          <Link to="/" className="text-[#666] !font-thin">CONTACT</Link>
+          <Link to="#" className="text-[#666] !font-thin">CONTACT</Link>
         </nav>
 
       </div>

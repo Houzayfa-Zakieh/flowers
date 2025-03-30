@@ -51,7 +51,7 @@ const Sider = () => {
                         </button>
                     </div>
                     <form method='get' className='relative pb-[20px]'>
-                        <Input className='pt-[1px] pl-[20px] outline-[#E55472] w-[260px] h-[45px] border-1 border-solid bg-[#f7f7f7] border-[#f7f7f7]' placeholder="Search here..." />
+                        <Input className='pt-[1px] pl-[20px] outline-[#E55472] w-[260px] h-[45px] border-1 border-solid bg-[#f7f7f7] border-[#f7f7f7]' placeholder="Search..." />
                         <Button className="pl-[35px] pr-[20px] w-[35px] h-[45px] absolute right-0 top-0 cursor-pointer" type="submit" title={<FontAwesomeIcon className='hover:text-[#E55472] text-[20px]' icon={faMagnifyingGlass} />} />
                     </form>
                     <div className="flex flex-col gap-2">
