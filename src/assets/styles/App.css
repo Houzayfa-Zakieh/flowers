@@ -244,3 +244,6 @@ footer ul a:hover li::before {
 .rangeButtons,.rangeLine{
   transition: none;
 }
+.swiper-slide-thumb-active {
+  border: 1.5px solid var(--decor); /* الإطار الزهري */
+}

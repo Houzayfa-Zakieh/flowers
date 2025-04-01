@@ -62,7 +62,7 @@ const SwiperComponent = () => {
                   <br />
                   Cupiditate velit cumque necessitatibus maxime porro dolorum, cum quo.
                 </p>
-                <Link style={{ transitionDelay: inView ? '2300ms' : '0ms' }} to="/" className={`text-[#fff] w-[165px] bg-[#E55472] rounded-full text-center pt-[13px] pb-[13px] px-10 text-[16px] hover:bg-[#666] transform relative z-200 transition-all duration-2000 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} >
+                <Link style={{ transitionDelay: inView ? '2300ms' : '0ms' }} to="/shop" className={`text-[#fff] w-[165px] bg-[#E55472] rounded-full text-center pt-[13px] pb-[13px] px-10 text-[16px] hover:bg-[#666] transform relative z-200 transition-all duration-2000 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} >
                   Shop Now
                 </Link>
               </div>
@@ -83,7 +83,7 @@ const SwiperComponent = () => {
                   <br />
                   Cupiditate velit cumque necessitatibus maxime porro dolorum, cum quo.
                 </p>
-                <Link style={{ transitionDelay: inView ? '2300ms' : '0ms' }} to="/" className={`text-[#fff] w-[165px] bg-[#E55472] rounded-full text-center pt-[13px] pb-[13px] px-10 text-[16px] hover:bg-[#666] transform transition-all duration-2000 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+                <Link style={{ transitionDelay: inView ? '2300ms' : '0ms' }} to="/shop" className={`text-[#fff] w-[165px] bg-[#E55472] rounded-full text-center pt-[13px] pb-[13px] px-10 text-[16px] hover:bg-[#666] transform transition-all duration-2000 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                   Shop Now
                 </Link>
               </div>

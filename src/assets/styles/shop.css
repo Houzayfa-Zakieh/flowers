@@ -16,4 +16,8 @@
 .ProductsShopContainer .productsCard .Timer {
     display: none;
   }
+  .items-container .item:nth-child(3){
+    background-color: #E55472;
+    color: #fff;
+  }
   

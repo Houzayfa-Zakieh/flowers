@@ -10,9 +10,9 @@ const ShopNav = () => {
       <ul>
         <Link to="/shop" className="hover:text-[#E55472] text-[#666]"><li className="!font-thin pr-[25px] text-[14px] pl-[25px] pt-[5px] pb-[5px]">Shop </li></Link>
         <Link to="#" className="hover:text-[#E55472] text-[#666]"><li className="!font-thin pr-[25px] text-[14px] pl-[25px] pt-[5px] pb-[5px]">Shop Grid  </li></Link>
-        <Link to="#" className="hover:text-[#E55472] text-[#666]"><li className="!font-thin pr-[25px] text-[14px] pl-[25px] pt-[5px] pb-[5px]">Shop Left sidebar </li></Link>
+        <Link to="/shop" className="hover:text-[#E55472] text-[#666]"><li className="!font-thin pr-[25px] text-[14px] pl-[25px] pt-[5px] pb-[5px]">Shop Left sidebar </li></Link>
         <Link to="#" className="hover:text-[#E55472] text-[#666]"><li className="!font-thin pr-[25px] text-[14px] pl-[25px] pt-[5px] pb-[5px]">Shop right sidebar   </li></Link>
-        <Link to="#" className="hover:text-[#E55472] text-[#666]"><li className="!font-thin pr-[25px] text-[14px] pl-[25px] pt-[5px] pb-[5px]">Shop details </li></Link>
+        <Link to="/products" className="hover:text-[#E55472] text-[#666]"><li className="!font-thin pr-[25px] text-[14px] pl-[25px] pt-[5px] pb-[5px]">Shop details </li></Link>
         <div className="relative -mt-[25px]" onMouseEnter={() => setShowOtherMenu(true)} onMouseLeave={() => setShowOtherMenu(false)} >
           <Link to="#" className="hover:text-[#E55472] text-[#666]"> <li className="!font-thin pr-[25px] pl-[25px] text-[14px] pt-[5px] pb-[5px] flex gap-[5px]">Other Pages <RightArrowIcon color="#666" /> </li></Link>
           {showOtherMenu && (

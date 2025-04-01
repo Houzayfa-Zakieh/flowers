@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 
@@ -27,14 +27,8 @@ const GoUpButton = () => {
   return (
     <>
       {showButton && (
-        <div
-          className="bg-[#f9f9f9] hover:bg-[#E55472] w-[40px] h-[40px] fixed z-10000 flex items-center justify-center shadow-sm right-[3%] bottom-[70px] cursor-pointer transform rotate-[45deg]"
-          onClick={scrollToTop}
-        >
-          <FontAwesomeIcon
-            icon={faArrowUp}
-            className="text-[#000] hover:text-[#fff] text-[20px] transform rotate-[-45deg] w-[12.5px] h-[20.5px]"
-          />
+        <div className="bg-[#f9f9f9] text-[#000] hover:text-[#fff] hover:bg-[#E55472] w-[40px] h-[40px] fixed z-10000 flex items-center justify-center shadow-sm right-[3%] bottom-[70px] cursor-pointer transform rotate-[45deg]" onClick={scrollToTop}>
+          <FontAwesomeIcon icon={faArrowUp} className="text-[20px] transform rotate-[-45deg] w-[12.5px] h-[20.5px]"/>
         </div>
       )}
     </>

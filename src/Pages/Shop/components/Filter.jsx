@@ -9,7 +9,8 @@ const Filter = () => {
   return (
     <>
 
-      <div className="flex items-start justify-start gap-[20px] flex-col md:w-[280px] mb-[100px]">
+      <div className="flex items-center justify-center w-[100%] mb-[100px]">
+        <div className="gap-[20px] flex items-start w-[280px] justify-start flex-col ">
         <form method='get' className='relative pb-[20px]'>
           <Input className='pt-[1px] pl-[20px] pr-[65px] outline-[#E55472] text-[14px] h-[45px] border-1 border-solid border-[#f0f0f0]' placeholder="Search your keyword..." />
           <Button className="px-[20px] absolute right-0 top-[10px] cursor-pointer" type="submit" title={<FontAwesomeIcon className='hover:text-[#E55472] text-[#666] text-[16px]' icon={faMagnifyingGlass} />} />
@@ -56,6 +57,7 @@ const Filter = () => {
             <Link to="#" key={index} className="hover:text-[#e55472] !font-thin">{tags}</Link>
           )}
         </div>
+      </div>
       </div>
     </>
   )

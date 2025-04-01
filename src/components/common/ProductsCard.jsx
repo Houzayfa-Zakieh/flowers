@@ -12,7 +12,7 @@ const ProductsCard = (props) => {
             <div className="w-[288px] productsCard relative flex items-center justify-center">
                 <div>
                     <div>
-                        <Link to="/">
+                        <Link to="/products">
                             <img src={props.img} alt={props.alt} className="w-full" />
                         </Link>
                         <div>
@@ -56,7 +56,7 @@ const ProductsCard = (props) => {
                         </div>
                     </div>
                     <div className="flex items-center justify-center flex-col gap-[10px] pt-[25px]">
-                        <h2 className="text-[14px] text-[#010101] hover:text-[#E55472]"><Link className="!font-thin">{props.productTitle}</Link> </h2>
+                        <h2 className="text-[14px] text-[#010101] hover:text-[#E55472]"><Link to="/products" className="!font-thin">{props.productTitle}</Link> </h2>
                         <div className="flex items-center justify-center gap-[20px]">
                             <span className="text-[16px] text-[#666]">{props.price}</span>
                             <del className="text-[12.8px] text-[#666]">{props.del}</del>
