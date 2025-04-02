@@ -245,5 +245,5 @@ footer ul a:hover li::before {
   transition: none;
 }
 .swiper-slide-thumb-active {
-  border: 1.5px solid var(--decor); /* الإطار الزهري */
+  border: 1.5px solid var(--decor); 
 }

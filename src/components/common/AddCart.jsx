@@ -17,11 +17,11 @@ const AddCart = () => {
                             <img src={Product} alt="product" />
                         </div>
                         <div className='flex items-start justify-start flex-col gap-[10px] pr-[20px]'>
-                            <Link to="/" className='text-[#010101] text-[18px] hover:text-[#E55472]'><h5 className='!font-thin'>Heart's Desire</h5></Link>
+                            <Link to="/products" className='text-[#010101] text-[18px] hover:text-[#E55472]'><h5 className='!font-thin'>Heart's Desire</h5></Link>
                             <p className="text-[#000] text-[16px] !font-thin"><FontAwesomeIcon icon={faCheckCircle} className='text-[green]' /> Successfully added to your Cart</p>
                             <div className="pt-[25px] pb-[15px] flex item-center justify-between gap-[10px] ">
-                                <Link to="/" className="text-[#fff] text-center hover:text-[#212529] cartButtons1 text-[14px] px-[20px] py-[5px]">VIEW CART</Link>
-                                <Link to="/" className="text-[#fff] text-center hover:text-[#212529] cartButtons2 text-[14px] px-[20px] py-[5px]">CHECKOUT</Link>
+                                <Link to="#" className="text-[#fff] text-center hover:text-[#212529] cartButtons1 text-[14px] px-[20px] py-[5px]">VIEW CART</Link>
+                                <Link to="#" className="text-[#fff] text-center hover:text-[#212529] cartButtons2 text-[14px] px-[20px] py-[5px]">CHECKOUT</Link>
                             </div>
                         </div>
                     </div>

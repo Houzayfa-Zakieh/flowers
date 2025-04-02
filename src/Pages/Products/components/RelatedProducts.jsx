@@ -5,7 +5,7 @@ import { Navigation } from 'swiper/modules';
 import { useRef, useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import ProductsCard from '../../../components/common/ProductsCard';
+import RelatedCards from './RelatedCards';
 import Products1 from '../../../assets/images/products1.webp';
 
 const RelatedProducts = () => {
@@ -56,7 +56,7 @@ const RelatedProducts = () => {
                             }}>
                             {topProductsData.map((product) => (
                                 <SwiperSlide className="text-center flex items-center justify-center mySwiperSlide" key={product.id}>
-                                    <ProductsCard
+                                    <RelatedCards
                                         key={product.id}
                                         img={product.img}
                                         alt={product.alt}
